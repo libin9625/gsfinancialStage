@@ -47,12 +47,18 @@
     font-size: 25px;
     background-color: #ff9501;
 }
+.financial_article .financial_article_top_inner .flex_father{
+    display: flex;
+    flex-flow:row;
+    margin-top:30px; 
+}
 .financial_article .financial_article_top_inner_2{
-    margin-top:30px;
-    width: 351px;
-    height: 168px;
+    
+    /* width: 351px; */
+    /*height: 168px; */
+    flex: 1;
     background-color: white;
-    float: left;
+    display: inline; 
 }
 .financial_article .dotted{
     border-right: 1px dotted #d3dfff;
