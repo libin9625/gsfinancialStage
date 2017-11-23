@@ -1,0 +1,99 @@
+.wrap{
+    position: fixed;
+} 
+
+header{
+    height: 80px;
+    background-image: url("../img/gs_header_back.png"); 
+    color: white;
+    font-size: 15px;
+}
+.message a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+header .header_inner{
+    position: relative;
+    top: 18px;
+    bottom: 0;
+    left: 40px;
+}
+header .header_inner .header_left{
+    width: 600px;
+    float: left;
+}
+header .header_inner .header_left .logo{
+    float: left;
+}
+header .header_inner .header_left .logo_words{
+    font-size: 30px;
+}
+header .header_inner .header_right{
+    float: right;
+    width: 300px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+header .header_inner .header_right .message{
+    float: left;
+}
+header .header_inner .header_right img{
+    margin-left: 30px;
+    float: left;
+}
+header .header_inner .header_right .message img{
+    float: left;
+    margin-right: 5px;
+}
+header .header_inner .header_right .user img{
+    margin-left: 30px;
+    margin-right: 5px;
+    width: 18px;
+    height: 23px;
+}
+header .header_inner .header_right .user .userName{
+    float: left;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+header .header_inner .header_right .user img.openShow{
+    width: 15px;
+    height: 10px;
+    margin-left: 12px;
+}
+header .header_inner .header_right .user #dropdownMenu1{
+    border: 0px;
+    background: none;
+    width: 20px;
+    height: 12px;
+    position: relative;
+    top: -5px;
+    left: -10px;
+} 
+header .header_inner .header_right .user ul.dropdown-menu{
+    left: 150px;
+}
+
+nav{
+    width: 200px;
+    float: left;
+    background-color: white;
+}
+nav ul li img{
+    margin-top: 30px; 
+    width: 200px;
+    height: 40px;
+}
+
+article iframe{
+    position: absolute;
+    top: 80px;
+    left: 200px;
+}
+
+footer img{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

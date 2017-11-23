@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head> @include('./header.html', { "title": "框架页" }) </head>
+<body>
+    <script src="dist/js/lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="dist/js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <div class="wrap">
+        <header>
+            <div class="header_inner">
+                <div class="header_left">
+                    <div class="logo">
+                        <img src="./dist/img/gs_header_logo.png" alt="">
+                    </div>
+                    <div class="logo_words">
+                        甘肃省中小企业产融信息对接服务平台
+                    </div>
+                </div>
+                <div class="header_right">  
+                    <div class="message">
+                        <img src="./dist/img/gs_header_message1.png" alt="">
+                        <a href="">消息中心</a>
+                    </div>
+                    <img src="./dist/img/gs_header_cutOff.png" alt="">
+                    <div class="user">
+                        <img src="./dist/img/gs_header_male.png" alt="">
+                        <span class="userName">李建灿</span>
+
+                        <!--下拉列表  -->
+                        
+                        <div class="dropdown">
+                            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                <img src="./dist/img/gs_header_down.png" alt="" class="openShow">
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation" >
+                                    <a role="menuitem" tabindex="-1" href="#">退出登录</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">修改密码</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--左侧选项  -->
+        <nav>
+            <ul id="navLeft">
+                <li page="./package1.html" class="pages">   
+                    <img src="./dist/img/nav_normal_01.png" alt="">
+                </li>
+                <li page="./package1.html" class="pages">   
+                    <img src="./dist/img/nav_normal_02.png" alt="">
+                </li>
+                <li page="./package2.html" class="pages">   
+                    <img src="./dist/img/nav_normal_03.png" alt="">
+                </li>
+                <li page="./package1.html" class="pages">   
+                    <img src="./dist/img/nav_normal_04.png" alt="">
+                </li>
+            </ul>
+        </nav>
+        <!--右侧页面  -->
+        <article>
+            <iframe src="" frameborder="1"></iframe>
+        </article>
+
+        <!--脚部图片  -->
+        <footer>
+            <img src="./dist/img/iframe_footer.png" alt="">
+        </footer>
+    </div>
+</body>
+ <script>
+    $(function(){
+        //  自适应页面大小
+        var iframe_width = $(window).width();
+        var iframe_height = $(window).height();
+        $('iframe').css('width',iframe_width-200+"px");
+        $('iframe').css('height',iframe_height-80+"px");
+        $('header').css('width',iframe_width);
+
+        // 变换
+        $('#navLeft').on('mouseover',function(event){
+            //初始化
+            for(var i = 0;i<4;i++){
+                var srcN = $('#navLeft').children()[i].children[0].getAttribute('src');
+                var pathHeaderN = srcN.slice(0,15);
+                var number = srcN.indexOf('.png');
+                var pathTailN = srcN.slice(number-3);
+                var pathN = pathHeaderN+'normal'+pathTailN;
+                $('#navLeft').children()[i].children[0].setAttribute('src',pathN);
+            }
+            if(event.target.nodeName == 'IMG'){
+                //模拟点击事件
+                var src = event.target.getAttribute('src');
+                var pathHeader = src.slice(0,15);
+                var pathTail = src.slice(21);
+                var path = pathHeader+'hover'+pathTail;
+                event.target.setAttribute('src',path);
+            }
+        })
+
+        // 选项卡  
+        $('.pages').on('mouseover',function(event){
+            var page = $(this).attr('page');
+            $('iframe').attr('src',page);
+        });
+        //默认触发
+        $($('.pages').eq(0).children()[0]).trigger('mouseover');
+
+    })
+</script> 
+</html>

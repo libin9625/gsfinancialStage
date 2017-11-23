@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head> @include('./header.html', { "title": "金融服务" }) </head>
+
+<body>
+    <div class="wrap">
+        <div class="financial_header">
+            <div class="financial_header_inner">
+                <img src="./dist/img/financial_header_01.png" alt="" class="financial_logo">
+                <span class="header_name">金融服务</span>
+                <img src="./dist/img/financial_header_02.png" alt="">
+                <span class="header_data">企业投资产品-2017年3期</span>
+            </div>
+        </div>
+        <div class="financial_article">
+            <div class="financial_article_top">
+                <div class="financial_article_top_inner">
+                    <div class="financial_article_top_inner_1">
+                        <span class="header_data">企业投资产品-2017年3期</span>
+                        <button class="proposer">立即申请</button>
+                    </div>
+                    <div></div>
+                    <div class="financial_article_top_inner_2 dotted">
+                        <img src="./dist/img/financial_article_logo.png" alt="">
+                    </div>
+                    <div class="financial_article_top_inner_2 dotted">
+                        <span class="special">100</span>
+                        <span>万元</span><br>
+                        <span class="normal">供应额度</span>
+                    </div>
+                    <div class="financial_article_top_inner_2 dotted">
+                        <span class="special">7</span>
+                        <span>个月</span><br>
+                        <span class="normal">产品期限</span>
+                    </div>
+                    <div class="financial_article_top_inner_2">
+                        <span class="special">5.80%</span><br>
+                        <span class="normal">汇率</span>
+                    </div>
+                </div>
+            </div>
+            <div class="financial_article_down">
+                <div class="financial_article_down_header">
+                    <div class="financial_article_down_header_border">
+                        <img src="./dist/img/financial_article_down.png" alt="">
+                        <span>产品信息</span>
+                    </div>
+                </div>
+                <div class="financial_article_down_one">
+                    <span class="special">产品详情：</span>
+                    <span class="normal">甘肃省兰州市安宁区</span>
+                </div>
+                <div class="financial_article_down_one">
+                    <span class="special">产品优势：</span>
+                    <span class="normal">月月涨产品赎回周期为30天。历史年化收益率随月份逐月增加，持有时间越长，预期收益越高。</span>
+                </div>
+                <div class="financial_article_down_one">
+                    <span class="special">申请资格：</span>
+                    <span class="normal">企业运营一年以上。</span>
+                </div>      
+                <div class="financial_article_down_one_special">
+                    <span class="special_3">申请条件：</span>
+                    <span class="normal_3">                   
+                        1.企业代表人年满18周岁(含)以上、60周岁(含)以下，有固定住所，持有效身份证件的具有完全民事行为能力的中国公民(含港、澳、台胞)；<br>
+                        2.有稳定、合法的收入来源，有按期还贷款本息的能力；<br>  
+                        3.品行良好，无不良信用记录和不良行为记录，当前在个人征信系统中无拖欠，2年来未出现超过连续3个月近(含)的拖欠记录。
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="financial_footer">
+            甘肃省工信委版权所有
+        </div>
+    </div>
+</body>
+<script src="dist/js/lib/jquery/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        //适应屏幕大小
+        var iframe_width = $(window).width();
+        $('.wrap').css('width',iframe_width+"px");
+        $('.financial_article').css('width',iframe_width+"px");
+        $('.financial_footer').css('width',iframe_width+"px");
+        var iframe_height = $(window).height();
+        $('.wrap').css('height',iframe_height+"px");
+    })
+</script>
+</html>
